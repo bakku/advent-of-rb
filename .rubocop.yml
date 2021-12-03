@@ -1,0 +1,28 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0.0
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Style/Documentation:
+  Enabled: no
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude: 
+    - db/**/*
+    - spec/**/*
+    - test/**/*
