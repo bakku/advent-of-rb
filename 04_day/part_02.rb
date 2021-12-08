@@ -67,7 +67,7 @@ class GameBoard
   end
 end
 
-bingo_input = File.readlines("./04_input_01.txt", chomp: true)
+bingo_input = File.readlines("./input.txt", chomp: true)
 
 random_choices = bingo_input[0].split(",").map(&:to_i)
 
@@ -77,4 +77,4 @@ puts bingo_input[2..].reject { |line| line.size.zero? }
   .map { |slice| slice.map { |row| row.split.map(&:to_i) } }
   .map { |board| GameBoard.new(board, random_choices.dup).play }
   .select { |game_result| game_result[:winning_board] }
-  .min_by { |game_result| game_result[:rounds] }[:score]
+  .max_by { |game_result| game_result[:rounds] }[:score]

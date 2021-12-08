@@ -13,7 +13,7 @@ def evaluate_command(command, positions)
   end
 end
 
-commands = File.readlines("./02_input_01.txt", chomp: true)
+commands = File.readlines("./input.txt", chomp: true)
 
 puts commands.each_with_object({ h: 0, d: 0 }, &method(:evaluate_command))
        .then { |positions| positions[:d] * positions[:h] }

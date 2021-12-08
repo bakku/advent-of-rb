@@ -65,7 +65,7 @@ fun initMatrix(lines: List<Line>): Array<Array<Int>> {
     return Array(maxY + 1) { Array(maxX + 1) { 0 } }
 }
 
-val lines = File("./05_input_02.txt")
+val lines = File("./input.txt")
     .readLines()
     .map { outer -> outer.split(" -> ").map { it.split(",").map(String::toInt) } }
     .map { it.toLine() }

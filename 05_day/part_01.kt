@@ -19,7 +19,7 @@ fun initMatrix(lines: List<Line>): Array<Array<Int>> {
     return Array(maxX + 1) { Array(maxY + 1) { 0 } }
 }
 
-val lines = File("./05_input_01.txt")
+val lines = File("./input.txt")
     .readLines()
     .map { outer -> outer.split(" -> ").map { it.split(",").map(String::toInt) } }
     .filter { it[0][0] == it[1][0] || it[0][1] == it[1][1] }

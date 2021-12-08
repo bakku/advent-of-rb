@@ -2,16 +2,11 @@
 
 def calculate_fuel_for_position(positions, target_position)
   positions.reduce(0) do |sum, pos|
-    offset = (pos - target_position).abs
-    next sum if offset.zero?
-
-    fuel_usage = (1..offset).to_a.inject(:+)
-
-    sum + fuel_usage
+    sum + (pos - target_position).abs
   end
 end
 
-crab_positions = File.read("./07_input_02.txt")
+crab_positions = File.read("./input.txt")
   .strip
   .split(",")
   .map(&:to_i)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-bit_numbers = File.readlines("./03_input_01.txt", chomp: true)
+bit_numbers = File.readlines("./input.txt", chomp: true)
 initial_ary = Array.new(bit_numbers.first.size).map { [0, 0] }
 
 final_counts = bit_numbers.each_with_object(initial_ary) do |num, counts|

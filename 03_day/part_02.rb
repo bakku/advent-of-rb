@@ -38,6 +38,6 @@ def oxygen_rating(bit_numbers, pos) = calc_rating(bit_numbers, pos, &method(:mos
 
 def co2_rating(bit_numbers, pos) = calc_rating(bit_numbers, pos, &method(:least_common_bit))
 
-bit_numbers = File.readlines("./03_input_02.txt", chomp: true)
+bit_numbers = File.readlines("./input.txt", chomp: true)
 
 puts oxygen_rating(bit_numbers, 0) * co2_rating(bit_numbers, 0)

@@ -19,7 +19,7 @@ def build_reduced_list(lanternfish)
   end
 end
 
-puts File.read("./06_input_02.txt")
+puts File.read("./input.txt")
        .strip
        .split(",")
        .map(&:to_i)
