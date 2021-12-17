@@ -45,8 +45,11 @@ class Graph
       r["0_0"].dist = 0
 
       until queue.empty?
-        next_vertex = r.select { |k, v| queue.include?(k) }.min_by { |_, v| v.dist }.first
+        next_vertex = queue.min_by { |q| r[q].dist }
         queue.reject! { |q| q == next_vertex }
+
+        p next_vertex
+        p queue.size
 
         @adjacencies[next_vertex].each do |edge|
           next unless queue.include?(edge.vertex)
